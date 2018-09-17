@@ -1,0 +1,137 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\120d31e60bda931f7f918bfa4fa37f04\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\62b0b6392046e4252157476714637dbb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\d6b6be72678be478d2db9f3bf67b7bdb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:21.0.3] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\cardview-v7-21.0.3.aar\3be3b681c005dabc44f57890e373f0f1\AndroidManifest.xml:14:4-17:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\f8881b094bed5df4d4e5357d5ead6efb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\eb1e4f02d01d44bc486ed0fc9d6ae18e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\5fe82a41ca875490929929473a54612e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\be6fb1fd20d7b70d82fdbcde033ca452\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\aa72f1fb6da17032afc6ade58cb32a45\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f8489317397ec7a2b4722c59b9622d52\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\ca8b3baf773892e333c6eabe9dd4a120\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\db75a5a46b6bd3821a5716ba2b4f3235\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\6cd5188c3e2f59aaca77f0f0775f0724\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2e8c5a40ca7abb7e610c2e109d8f2e10\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\de7b57c784e9c77eb5c1c469a9091297\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0778c07a763f164d5e76f947ec70fb58\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5cd110fa2997d820cca7c7ee7caaf2f7\AndroidManifest.xml:17:1-22:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:5:5-66
+	android:name
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:6:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:21.0.3] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\cardview-v7-21.0.3.aar\3be3b681c005dabc44f57890e373f0f1\AndroidManifest.xml:16:5-19
+MERGED from [com.android.support:cardview-v7:21.0.3] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\cardview-v7-21.0.3.aar\3be3b681c005dabc44f57890e373f0f1\AndroidManifest.xml:16:5-19
+	android:supportsRtl
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:9:9-41
+	android:roundIcon
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:10:9-47
+	android:icon
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:8:9-42
+	android:allowBackup
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:12:9-40
+activity#com.hajaulee.mobileanime.MainActivity
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:13:9-22:20
+	android:label
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:15:13-45
+	android:theme
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:16:13-56
+	android:name
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:14:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:20:17-77
+	android:name
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:20:27-74
+activity#com.hajaulee.mobileanime.DetailActivity
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:23:9-25:61
+	android:label
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:25:13-58
+	android:name
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:24:13-43
+uses-sdk
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\120d31e60bda931f7f918bfa4fa37f04\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\120d31e60bda931f7f918bfa4fa37f04\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\62b0b6392046e4252157476714637dbb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\62b0b6392046e4252157476714637dbb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\d6b6be72678be478d2db9f3bf67b7bdb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\d6b6be72678be478d2db9f3bf67b7bdb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:21.0.3] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\cardview-v7-21.0.3.aar\3be3b681c005dabc44f57890e373f0f1\AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:cardview-v7:21.0.3] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\cardview-v7-21.0.3.aar\3be3b681c005dabc44f57890e373f0f1\AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\f8881b094bed5df4d4e5357d5ead6efb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\f8881b094bed5df4d4e5357d5ead6efb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\eb1e4f02d01d44bc486ed0fc9d6ae18e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\eb1e4f02d01d44bc486ed0fc9d6ae18e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\5fe82a41ca875490929929473a54612e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\5fe82a41ca875490929929473a54612e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\be6fb1fd20d7b70d82fdbcde033ca452\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\be6fb1fd20d7b70d82fdbcde033ca452\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\aa72f1fb6da17032afc6ade58cb32a45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\aa72f1fb6da17032afc6ade58cb32a45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f8489317397ec7a2b4722c59b9622d52\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f8489317397ec7a2b4722c59b9622d52\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\ca8b3baf773892e333c6eabe9dd4a120\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\ca8b3baf773892e333c6eabe9dd4a120\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\db75a5a46b6bd3821a5716ba2b4f3235\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\db75a5a46b6bd3821a5716ba2b4f3235\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\6cd5188c3e2f59aaca77f0f0775f0724\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\6cd5188c3e2f59aaca77f0f0775f0724\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2e8c5a40ca7abb7e610c2e109d8f2e10\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2e8c5a40ca7abb7e610c2e109d8f2e10\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\de7b57c784e9c77eb5c1c469a9091297\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\de7b57c784e9c77eb5c1c469a9091297\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0778c07a763f164d5e76f947ec70fb58\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0778c07a763f164d5e76f947ec70fb58\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5cd110fa2997d820cca7c7ee7caaf2f7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5cd110fa2997d820cca7c7ee7caaf2f7\AndroidManifest.xml:20:5-44
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml

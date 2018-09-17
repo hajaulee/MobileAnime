@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MobileAnime</string>
+    <string name="tab_newest">Mới nhất</string>
+    <string name="tab_all">Tất cả</string>
+    <string name="tab_suggest">Đề xuất</string>
+    <string name="tab_favorite">Yêu thích</string>
+    <string name="action_settings">⋮</string>
+    <string name="jsub">Jsub</string>
+    <string name="vsub">Vsub</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="three_dot">⋮</string>
+    <string name="back_again">Nhấn lần nữa để thoát</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="refresh_success">Làm mới thành công</string>
+    <string name="load_more">Đang tải thêm dữ liệu</string>
+    <string name="app_describe">Mobile Anime\n<small><small>Powered by HaJaU</small></small></string>
+    <string name="title_activity_detail">DetailActivity</string>
+</resources>
