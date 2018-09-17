@@ -1,8 +1,6 @@
 package com.hajaulee.mobileanime;
 
 import android.content.res.ColorStateList;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -25,11 +23,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Locale;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 import static com.hajaulee.mobileanime.SUBTITLE.JSUB;
 import static com.hajaulee.mobileanime.SUBTITLE.VSUB;
@@ -53,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean isLoadingMore = false;
     private boolean vSubLoaded = false;
     private boolean jSubLoaded = false;
+    private String ANIMEVSUB_LINK = "http://animevsub.tv/danh-sach/all/latest/all/all/all/trang-%d.html";
+    private int animeAllPageCurrentPage = 1;
     private ViewPager jsubViewPager;
     private ViewPager vsubViewPager;
     private Button vSub;
@@ -70,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private JsubContentFragment[] jsubContentFragments = new JsubContentFragment[4];
     private VsubContentFragment[] vsubContentFragments = new VsubContentFragment[4];
     private DialogSet dialogSet;
+
     @Override
     @SuppressWarnings(value = "unchecked")
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,20 +139,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (currentSection != 1) {
                     searchView.setIconified(false);
-                } else {
+                } else if(!isLoadingMore){
                     Snackbar.make(view, R.string.load_more, Snackbar.LENGTH_SHORT).show();
-                    if (currentLanguageSubtitle == 0) {
-                        fab.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getBaseContext(), R.color.colorDark)));
+                    fab.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getBaseContext(), R.color.colorDark)));
+                    if (currentLanguageSubtitle == 0 ) {
                         String script = "javascript: (function(){" +
                                 "window.scrollTo(0,document.body.scrollHeight);" +
                                 "setTimeout(processData, 1500);" +
                                 Tool.processJsubDataScript +
                                 "})()";
                         jsubWebView.loadUrl(script);
+                        isLoadingMore = true;
+                    } else if (currentLanguageSubtitle == 1 && vSubLoaded) {
+                        vsubWebView.loadUrl(String.format(Locale.US,ANIMEVSUB_LINK, animeAllPageCurrentPage));
+                        isLoadingMore = true;
+                        vSubLoaded = false;
+                        animeAllPageCurrentPage++;
                     }
                 }
             }
         });
+        Tool.getLoadedAnime(this);
         loadAnimeLonHome();
         loadAnimeVSubHome();
     }
@@ -206,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
     public void setLoadedPage(SUBTITLE subtitle) {
         jSubLoaded = subtitle.equals(JSUB) || jSubLoaded;
         vSubLoaded = subtitle.equals(VSUB) || vSubLoaded;
-        Log.i("LoadedPage:", "jSubLoaded:"+ jSubLoaded + "|vSubLoaded:" + vSubLoaded);
+        Log.i("LoadedPage:", "jSubLoaded:" + jSubLoaded + "|vSubLoaded:" + vSubLoaded);
     }
 
     public boolean isContentLoadedComplete() {

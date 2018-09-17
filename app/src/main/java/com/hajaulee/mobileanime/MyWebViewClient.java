@@ -53,6 +53,23 @@ public class MyWebViewClient extends WebViewClient {
                     Tool.processJsubDataScript +
                     "})()";
             webView.loadUrl(script);
+        }else if(subtitle == SUBTITLE.VSUB && url.contains("all/all/all")){
+            String script = "javascript: (function(){" +
+                    "var inter1 = setInterval(waitMovie1, 100);" +
+                    "var anime1 = [];" +
+                    "   function waitMovie1(){" +
+                    "       var movies = document.querySelectorAll('.TPostMv');" +
+                    "       var len = movies.length;" +
+                    "       if(len > 8){" +
+                    "           clearInterval(inter1);" +
+                    "           Android.sendLog('Get .MovieListTop .TPostMv');" +
+                    "           anime1 = processData(movies);" +
+                    "           Android.sendMoreVsubArray(anime1);" +
+                    "       }" +
+                    "   }" +
+                    Tool.processVsubDataScript +
+                    "})()";
+            webView.loadUrl(script);
         }else if(subtitle == SUBTITLE.VSUB){
             String script = "javascript: (function(){" +
                     "var inter1 = setInterval(waitMovie1, 100);" +
@@ -70,7 +87,7 @@ public class MyWebViewClient extends WebViewClient {
                     "       }" +
                     "   }" +
                     "   function waitMovie2(){" +
-                    "       var movies = document.querySelectorAll('#single-home .TPostMv');" +
+                    "       var movies = document.querySelectorAll('#hot-home .TPostMv');" +
                     "       var len = movies.length;" +
                     "       if(len > 8){" +
                     "           clearInterval(inter2);" +
@@ -80,7 +97,7 @@ public class MyWebViewClient extends WebViewClient {
                     "       }" +
                     "   }" +
                     "   function waitMovie3(){" +
-                    "       var movies =  document.querySelectorAll('#hot-home .TPostMv');" +
+                    "       var movies =  document.querySelectorAll('#single-home .TPostMv');" +
                     "       var len = movies.length;" +
                     "       if(len > 8){" +
                     "           clearInterval(inter3);" +

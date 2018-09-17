@@ -17,8 +17,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -32,6 +33,7 @@ public class Tool {
     public static final String SEPARATOR = ">>><<<";
     public static final int PORTRAIT_COL_COUNT = 3;
     public static final int LANDSCAPE_COL_COUNT = 4;
+    static private boolean debug = false;
 
     public static RecyclerView.OnScrollListener getScrollListener(final MainActivity activity) {
         return new RecyclerView.OnScrollListener() {
@@ -44,8 +46,8 @@ public class Tool {
                         activity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                activity.isLoadingMore = true;
                                 activity.getFloatButton().performClick();
+                                activity.isLoadingMore = true;
                             }
                         });
                     }
@@ -97,11 +99,29 @@ public class Tool {
         if (map != null) {
             for (Map.Entry<String, byte[]> i : map.entrySet()) {
                 Bitmap value = BitmapFactory.decodeByteArray(i.getValue(), 0, i.getValue().length);
-                Log.d(TAG, "Load " + (value==null?"failed :":"success :") + i.getKey());
+                if (debug)
+                    Log.d(TAG, "Load " + (value == null ? "failed :" : "success :") + i.getKey());
                 if (value != null)
                     AnimeCardData.LOADED_BITMAP.put(i.getKey(), value);
             }
         }
+    }
+
+    public static void saveLoadedAnime(final MainActivity mainActivity) {
+        saveObject(mainActivity, LOADED_JSUB_ANIME, mainActivity.getTotalJsubAnimeList());
+        saveObject(mainActivity, LOADED_VSUB_ANIME, mainActivity.getTotalVsubAnimeList());
+    }
+
+    @SuppressWarnings("unchecked")
+    public static void getLoadedAnime(final MainActivity mainActivity) {
+        List<AnimeCardData> jsubCardDataList = (ArrayList<AnimeCardData>) loadSavedObject(mainActivity, LOADED_JSUB_ANIME);
+        List<AnimeCardData> vsubCardDataList = (ArrayList<AnimeCardData>) loadSavedObject(mainActivity, LOADED_VSUB_ANIME);
+        if (jsubCardDataList != null)
+            mainActivity.getTotalJsubAnimeList().addAll(jsubCardDataList);
+        if (vsubCardDataList != null)
+            mainActivity.getTotalVsubAnimeList().addAll(vsubCardDataList);
+        AndroidAPI androidAPI = new AndroidAPI(mainActivity);
+        androidAPI.refreshUI();
     }
 
     public static void saveLoadedBitmap(final Context context) {
@@ -109,21 +129,23 @@ public class Tool {
             @Override
             public void run() {
                 Map<String, byte[]> map = new ConcurrentHashMap<>();
-                Log.i("Before save:", "Size:" + AnimeCardData.LOADED_BITMAP.size());
+                if (debug) Log.i("Before save:", "Size:" + AnimeCardData.LOADED_BITMAP.size());
                 Iterator<Map.Entry<String, Bitmap>> animeList = AnimeCardData.LOADED_BITMAP.entrySet().iterator();
                 while (animeList.hasNext()) {
                     Map.Entry<String, Bitmap> entry = animeList.next();
                     String key = entry.getKey();
                     Bitmap value = entry.getValue();
                     if (value != null) {
-                        Log.d("BITMAP:success-", key + ": in Tool.java saveLoadedBitmap");
+                        if (debug)
+                            Log.d("BITMAP:success-", key + ": in Tool.java saveLoadedBitmap");
                         map.put(key, Tool.bitmapToBytes(value));
                     } else {
-                        Log.d("BITMAP:failed-", key + ": NUll in Tool.java saveLoadedBitmap");
+                        if (debug)
+                            Log.d("BITMAP:failed-", key + ": NUll in Tool.java saveLoadedBitmap");
                         animeList.remove();
                     }
                 }
-                Log.i("After save:", "Size:" + map.size());
+                if (debug) Log.i("After save:", "Size:" + map.size());
                 Tool.saveObject(context, Tool.LOADED_IMAGE_PATH, map);
             }
 
@@ -163,7 +185,7 @@ public class Tool {
 
     static public Bitmap bitmapFromUrl(String url, String TAG) {
         if (AnimeCardData.LOADED_BITMAP.containsKey(url) && AnimeCardData.LOADED_BITMAP.get(url) != null) {
-            Log.d(TAG, "Loaded from cache: " + url);
+            if (debug) Log.d(TAG, "Loaded from cache: " + url);
             return AnimeCardData.LOADED_BITMAP.get(url);
         }
         try {
@@ -174,6 +196,13 @@ public class Tool {
             InputStream input = connection.getInputStream();
 //            byte[] bytes = streamToByteArray(input);
 //            int i = bytes.length;
-//            Log.d(TAG, "Bitmap: " + i);
+//            if(debug)Log.d(TAG, "Bitmap: " + i);
 //            return bytes;
-            Bitmap bitmap = BitmapFactory.de
+            Bitmap bitmap = BitmapFactory.decodeStream(input);
+            input.close();
+            return bitmap;
+        } catch (IOException e) {
+            return null;
+        }
+    }
+}

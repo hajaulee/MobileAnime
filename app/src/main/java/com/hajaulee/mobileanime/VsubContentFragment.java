@@ -52,6 +52,7 @@ public class VsubContentFragment extends Fragment {
             mRecyclerView = rootView.findViewById(R.id.recyclerview);
             GridLayoutManager mGridLayoutManager = new GridLayoutManager(getContext(), Tool.PORTRAIT_COL_COUNT);
             mRecyclerView.setLayoutManager(mGridLayoutManager);
+            mRecyclerView.addOnScrollListener(Tool.getScrollListener(mainActivity));
             if (myAdapter == null) {
                 mAnimeCards = new ArrayList<>();
                 List<AnimeCardData> mList = mainActivity.getTotalVsubAnimeList();
@@ -63,10 +64,10 @@ public class VsubContentFragment extends Fragment {
                             mAnimeCards.addAll(mList.subList(0, 10));
                             break;
                         case 3:
-                            mAnimeCards.addAll(mList.subList(20, 30));
+                            mAnimeCards.addAll(mList.subList(10, 20));
                             break;
                         case 2:
-                            mAnimeCards.addAll(mList.subList(10, 20));
+                            mAnimeCards.addAll(mList.subList(20, mList.size()));
                             break;
                     }
                 }
