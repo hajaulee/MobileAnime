@@ -41,7 +41,7 @@ public class MyWebViewClient extends WebViewClient {
             String script = "javascript: (function(){" +
                     "var inter = setInterval(waitMovie, 100);" +
                     "function waitMovie(){" +
-                    "       Android.sendLog('Waiting...');" +
+                    "       Android.sendLog('Waiting...waitMovie');" +
                     "var len = document.querySelectorAll('a.mini-previews').length;" +
                     "   if(len >= 8){" +
                     "       if(len >= 24)" +

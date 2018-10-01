@@ -3,9 +3,9 @@ package com.hajaulee.mobileanime;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -27,7 +27,7 @@ import static android.support.v7.widget.RecyclerView.SCROLL_STATE_IDLE;
 
 public class Tool {
     public static final String TAG = "Tool";
-    public static final String LOADED_IMAGE_PATH = "LOADED_IMAGE_CACHE.cache";
+    public static final String LOADED_IMAGE_PATH = "LOADED_IMAGE_CACHE";
     public static final String LOADED_VSUB_ANIME = "LOADED_VSUB_ANIME.cache";
     public static final String LOADED_JSUB_ANIME = "LOADED_JSUB_ANIME.cache";
     public static final String SEPARATOR = ">>><<<";
@@ -82,15 +82,20 @@ public class Tool {
             "   return animeList;" +
             "}";
 
-    public static void saveObject(Context context, String fname, Object content) {
-        File file = new File(context.getApplicationInfo().dataDir + File.separator + fname);
-        try {
-            ObjectOutputStream oss = new ObjectOutputStream(new FileOutputStream(file));
-            oss.writeObject(content);
-            oss.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void saveObject(final Context context, final String fname, final Object content) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                File file = new File(context.getApplicationInfo().dataDir + File.separator + fname);
+                try {
+                    ObjectOutputStream oss = new ObjectOutputStream(new FileOutputStream(file));
+                    oss.writeObject(content);
+                    oss.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     @SuppressWarnings("unchecked")
@@ -104,6 +109,7 @@ public class Tool {
                 if (value != null)
                     AnimeCardData.LOADED_BITMAP.put(i.getKey(), value);
             }
+            System.gc();
         }
     }
 
@@ -114,20 +120,27 @@ public class Tool {
 
     @SuppressWarnings("unchecked")
     public static void getLoadedAnime(final MainActivity mainActivity) {
-        List<AnimeCardData> jsubCardDataList = (ArrayList<AnimeCardData>) loadSavedObject(mainActivity, LOADED_JSUB_ANIME);
+        final List<AnimeCardData> jsubCardDataList = (ArrayList<AnimeCardData>) loadSavedObject(mainActivity, LOADED_JSUB_ANIME);
         List<AnimeCardData> vsubCardDataList = (ArrayList<AnimeCardData>) loadSavedObject(mainActivity, LOADED_VSUB_ANIME);
         if (jsubCardDataList != null)
             mainActivity.getTotalJsubAnimeList().addAll(jsubCardDataList);
         if (vsubCardDataList != null)
             mainActivity.getTotalVsubAnimeList().addAll(vsubCardDataList);
+        mainActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(mainActivity, "Loaded:"+ jsubCardDataList.size(), Toast.LENGTH_SHORT).show();
+            }
+        });
         AndroidAPI androidAPI = new AndroidAPI(mainActivity);
         androidAPI.refreshUI();
     }
 
     public static void saveLoadedBitmap(final Context context) {
-        AsyncTask.execute(new Runnable() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
+                System.gc();
                 Map<String, byte[]> map = new ConcurrentHashMap<>();
                 if (debug) Log.i("Before save:", "Size:" + AnimeCardData.LOADED_BITMAP.size());
                 Iterator<Map.Entry<String, Bitmap>> animeList = AnimeCardData.LOADED_BITMAP.entrySet().iterator();
@@ -149,7 +162,7 @@ public class Tool {
                 Tool.saveObject(context, Tool.LOADED_IMAGE_PATH, map);
             }
 
-        });
+        }).start();
     }
 
     public static Object loadSavedObject(Context context, String fname) {
@@ -166,9 +179,19 @@ public class Tool {
     }
 
     public static byte[] bitmapToBytes(Bitmap bmp) {
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        byte[] byteArray = stream.toByteArray();
+        byte[] byteArray = new byte[0];
+        try {
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bmp.compress(Bitmap.CompressFormat.PNG, 0, stream);
+            byteArray = stream.toByteArray();
+            bmp.recycle();
+            stream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Throwable e) {
+            e.printStackTrace();
+            Log.e(TAG, "Memory error");
+        }
         return byteArray;
     }
 
@@ -180,6 +203,7 @@ public class Tool {
             buffer.write(data, 0, nRead);
         }
         buffer.flush();
+        buffer.close();
         return buffer.toByteArray();
     }
 
@@ -191,17 +215,16 @@ public class Tool {
         try {
             HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
             connection.setRequestProperty("User-agent", "Mozilla/4.0");
-
             connection.connect();
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
             InputStream input = connection.getInputStream();
-//            byte[] bytes = streamToByteArray(input);
-//            int i = bytes.length;
-//            if(debug)Log.d(TAG, "Bitmap: " + i);
-//            return bytes;
-            Bitmap bitmap = BitmapFactory.decodeStream(input);
+            Bitmap bitmap = BitmapFactory.decodeStream(input, null, options);
             input.close();
+            System.gc();
             return bitmap;
         } catch (IOException e) {
+            e.printStackTrace();
             return null;
         }
     }

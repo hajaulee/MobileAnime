@@ -1,14 +1,15 @@
 package com.hajaulee.mobileanime;
 
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -16,9 +17,16 @@ public class AndroidAPI {
     private final static String TAG = "AndroidAPI";
 
     private MainActivity mainActivity;
+    private DetailActivity detailActivity;
+    private AnimeCardData animeData;
 
     public AndroidAPI(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
+    }
+
+    AndroidAPI(DetailActivity detailActivity, AnimeCardData animeData) {
+        this.detailActivity = detailActivity;
+        this.animeData = animeData;
     }
 
     @JavascriptInterface
@@ -31,9 +39,12 @@ public class AndroidAPI {
         Log.d(TAG, "Loaded:Vsub" + loadedSection);
         for (String animeInfo : s) {
             String[] info = animeInfo.split(Tool.SEPARATOR);
-            AnimeCardData.LOADED_BITMAP.put(info[1], Tool.bitmapFromUrl(info[1], TAG));
+            Bitmap image = Tool.bitmapFromUrl(info[1], TAG);
+            if(image != null)
+            AnimeCardData.LOADED_BITMAP.put(info[1],image);
+            else
+                Log.e(TAG,  "NullImageError:" + Arrays.toString(info));
             Log.d(TAG, "Anime name: " + info[2]);
-//            Log.d(TAG, animeInfo);
             list.add(new AnimeCardData(animeInfo, 3));
         }
     }
@@ -95,7 +106,6 @@ public class AndroidAPI {
 
     private void handleAfterLoadContent(SUBTITLE subtitle) {
         Log.d(TAG, "Image pool size: " + AnimeCardData.LOADED_BITMAP.size());
-        Tool.saveLoadedBitmap(mainActivity.getApplicationContext());
         mainActivity.isLoadingMore = false;
         mainActivity.setLoadedPage(subtitle);
         mainActivity.runOnUiThread(new Runnable() {
@@ -119,7 +129,8 @@ public class AndroidAPI {
                 mainActivity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        mainActivity.getDialogSet().hideHelloDialog();
+                        if (mainActivity.getDialogSet() != null)
+                            mainActivity.getDialogSet().hideHelloDialog();
                     }
                 });
             }
@@ -140,6 +151,38 @@ public class AndroidAPI {
         refreshJsubUI(loadedSection);
         handleAfterLoadContent(SUBTITLE.JSUB);
         Tool.saveLoadedAnime(mainActivity);
+    }
+
+    @JavascriptInterface
+    public void setEpisodeList(String[] s) {
+        animeData.getEpisodeList().get(0).clear();
+        Log.i(TAG, Arrays.toString(s));
+        for (String value : s) {
+            String[] info = value.split(Tool.SEPARATOR);
+            Log.i(TAG, Arrays.toString(info));
+            if (info.length != 3)
+                continue;
+            AnimeCardData.LOADED_BITMAP.put(info[1], Tool.bitmapFromUrl(info[1], TAG));
+            animeData.getEpisodeList().get(0).add(AnimeCardData.createEpisodeInfo(info[0], info[1], info[2]));
+        }
+        Log.i(TAG, "Episode size: " + s.length);
+        detailActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                detailActivity.setupEpisodeList();
+            }
+        });
+    }
+
+    @JavascriptInterface
+    public void setDescription(String s) {
+        animeData.setAnimeCardDescription(s);
+        detailActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                detailActivity.getmDescription().setText(animeData.getAnimeCardDescription());
+            }
+        });
     }
 
     @JavascriptInterface

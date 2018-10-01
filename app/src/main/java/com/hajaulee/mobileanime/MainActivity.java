@@ -74,13 +74,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         dialogSet = new DialogSet(this);
         dialogSet.showHelloDialog();
+        Toolbar toolbar = findViewById(R.id.toolbar);
         AnimeCardData.LOADED_BITMAP = new ConcurrentHashMap<>();
-        Tool.getLoadedBitmap(getApplicationContext());
+        setSupportActionBar(toolbar);
+        initViewPaperAndButton();
+        loadAnimeLonHome();
+        loadAnimeVSubHome();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Tool.getLoadedBitmap(getApplicationContext());
+                Tool.getLoadedAnime(MainActivity.this);
+            }
+        }).start();
+    }
+
+    private void initViewPaperAndButton(){
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         jsubSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), JSUB);
@@ -91,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         vsubViewPager = findViewById(R.id.vsub_container);
         vsubViewPager.setAdapter(vsubSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         ViewPager.OnPageChangeListener onPageChangeListener = new TabLayout.TabLayoutOnPageChangeListener(tabLayout) {
 
             @Override
@@ -133,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 changeButtonBackGround(0);
             }
         });
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -159,11 +170,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        Tool.getLoadedAnime(this);
-        loadAnimeLonHome();
-        loadAnimeVSubHome();
     }
-
     private void changeButtonBackGround(int button) {
         if (button == 0) {
             jSub.setBackground(getDrawable(R.drawable.left_button_ac));
@@ -241,6 +248,11 @@ public class MainActivity extends AppCompatActivity {
         }, TIME_TO_BACK);
     }
 
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Tool.saveLoadedBitmap(getApplicationContext());
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
