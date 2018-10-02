@@ -53,7 +53,8 @@ public class JsubContentFragment extends Fragment {
             GridLayoutManager mGridLayoutManager = new GridLayoutManager(getContext(), Tool.PORTRAIT_COL_COUNT);
             mRecyclerView.setLayoutManager(mGridLayoutManager);
             mRecyclerView.addOnScrollListener(Tool.getScrollListener(mainActivity));
-            if (myAdapter == null) {
+            if (myAdapter == null || myAdapter.getItemCount() == 0 || mAnimeCards == null) {
+                Log.d("Had Data", "Not data" + getArguments().getInt(ARG_SECTION_NUMBER));
                 mAnimeCards = new ArrayList<>();
                 List<AnimeCardData> mList = mainActivity.getTotalJsubAnimeList();
                 int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);

@@ -3,7 +3,10 @@
     <color name="colorPrimary">#ffc423</color>
     <color name="colorPrimaryDark">#fcb400</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorDark">#1d1e03</color>
+    <color name="colorDark">#686862</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="episode_background">#fffd87</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

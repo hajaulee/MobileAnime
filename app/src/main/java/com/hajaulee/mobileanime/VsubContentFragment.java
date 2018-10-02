@@ -25,8 +25,9 @@ public class VsubContentFragment extends Fragment {
     List<AnimeCardData> mAnimeCards;
     AnimeCardAdapter myAdapter;
     int sectionNumber;
+
     public VsubContentFragment() {
-        this.mainActivity = (MainActivity)getActivity();
+        this.mainActivity = (MainActivity) getActivity();
     }
 
     /**
@@ -48,7 +49,7 @@ public class VsubContentFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         if (getArguments() != null) {
-            this.mainActivity = (MainActivity)getActivity();
+            this.mainActivity = (MainActivity) getActivity();
             mRecyclerView = rootView.findViewById(R.id.recyclerview);
             GridLayoutManager mGridLayoutManager = new GridLayoutManager(getContext(), Tool.PORTRAIT_COL_COUNT);
             mRecyclerView.setLayoutManager(mGridLayoutManager);

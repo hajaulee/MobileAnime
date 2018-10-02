@@ -1,6 +1,7 @@
 package com.hajaulee.mobileanime;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
@@ -8,18 +9,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Adapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,9 +32,13 @@ public class DetailActivity extends AppCompatActivity {
     TextView mDescription;
     WebView webView;
     AnimeCardData mAnime;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
+                WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
         setContentView(R.layout.activity_detail);
         getSupportActionBar().hide();
         mDescription = findViewById(R.id.description);
@@ -54,46 +59,22 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                webView.loadUrl("javascript: (function(){" +
-                        "var inter = setInterval(waitDescription, 100);" +
-                        "function waitDescription(){" +
-                        "   Android.sendLog('Waiting description...');" +
-                        "   var len = document.querySelector('.resizable-description').innerHTML.length;" +
-                        "   if(len >= 8){" +
-                        "       Android.setDescription(document.querySelector('.resizable-description').innerHTML);" +
-                        "       clearInterval(inter);" +
-                        "   }" +
-                        "}" +
-                        "var inter1 = setInterval(waitEpisode, 100);" +
-                        "function waitEpisode(){" +
-                        "   Android.sendLog('Waiting waitEpisode...');" +
-                        "   var epList = document.querySelectorAll('.episode-container');" +
-                        "   if(epList.length > 0 && epList[0].querySelector('h5').innerHTML.length > 0){" +
-                        "       var epListData = [];" +
-                        "       for (var i = 0 ; i < epList.length; i++){" +
-                        "           epListData.push(epList[i].href+" +
-                        "           '"+Tool.SEPARATOR+"'+" +
-                        "           epList[i].querySelector('img').src+" +
-                        "           '"+Tool.SEPARATOR+"'+" +
-                        "           epList[i].querySelector('h5').innerHTML);" +
-                        "       }" +
-                        "       Android.sendLog('Complete waitEpisode...');" +
-                        "       Android.setEpisodeList(epListData);" +
-                        "       clearInterval(inter1);" +
-                        "   }" +
-                        "}" +
-                        "})()");
+                if (url.contains("animelon.com/series"))
+                    webView.loadUrl(Javascript.jSubLoadDescriptionAndEpisodeScript);
             }
         });
-        webView.getSettings().setBlockNetworkImage(true);
+        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+//        webView.getSettings().setBlockNetworkImage(true);
         webView.getSettings().setLoadsImagesAutomatically(false);
         webView.setWebChromeClient(new WebChromeClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        // chromium, enable hardware acceleration
+        webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
     }
 
     @SuppressWarnings("unchecked")
-    public void setupEpisodeList(){
+    public void setupEpisodeList() {
         final ListView episodeListView = findViewById(R.id.episode_list);
         List<HashMap<String, String>> aList = new ArrayList<>();
         List<EpisodeInfo> epList = mAnime.getEpisodeList().get(0);
@@ -108,12 +89,12 @@ public class DetailActivity extends AppCompatActivity {
         String[] from = {"item_text", "item_icon"};
         int[] to = {R.id.item_text, R.id.item_icon};
 
-        BaseAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), aList, R.layout.mylist, from, to){
+        BaseAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), aList, R.layout.mylist, from, to) {
             @Override
             public View getView(final int position, View view, ViewGroup parent) {
                 View row = view;
-                if(view == null){
-                    row = ((LayoutInflater)getApplicationContext().
+                if (view == null) {
+                    row = ((LayoutInflater) getApplicationContext().
                             getSystemService(Context.LAYOUT_INFLATER_SERVICE)).
                             inflate(R.layout.mylist, null);
                 }
@@ -122,12 +103,16 @@ public class DetailActivity extends AppCompatActivity {
                 final Map<String, String> episodeInfo = (Map<String, String>) getItem(position);
                 textView.setText(episodeInfo.get("item_text"));
                 String imageLink = episodeInfo.get("item_icon_link");
-                if(AnimeCardData.LOADED_BITMAP.get(imageLink) != null)
-                        imageView.setImageBitmap(AnimeCardData.LOADED_BITMAP.get(imageLink));
+                Bitmap bmp = Tool.getImageFromMapOrInternal(DetailActivity.this, imageLink);
+                if (bmp != null)
+                    imageView.setImageBitmap(bmp);
                 row.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        episodeListView.setSelection(position);
+                        for (int i = 0; i < episodeListView.getChildCount(); i++) {
+                            episodeListView.getChildAt(i).setBackgroundColor(getResources().getColor(R.color.white));
+                        }
+                        view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         webView.loadUrl(episodeInfo.get("item_link"));
                     }
                 });
@@ -135,15 +120,17 @@ public class DetailActivity extends AppCompatActivity {
             }
         };
         episodeListView.setAdapter(simpleAdapter);
+        setListViewHeightBasedOnChildren(episodeListView);
     }
-    private void setupForShowHideDescription(){
+
+    private void setupForShowHideDescription() {
         final TextView descriptionTextView = findViewById(R.id.description);
         Button showHideDescription = findViewById(R.id.anime_name);
+        final TextView arrow = findViewById(R.id.arrow);
         descriptionTextView.setMovementMethod(new ScrollingMovementMethod());
-        showHideDescription.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener showHideDescriptionListen = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView arrow = findViewById(R.id.arrow);
                 if (arrow.getText().equals(getString(R.string.down_arrow))) {
                     arrow.setText(R.string.up_arrow);
                     descriptionTextView.setVisibility(View.GONE);
@@ -152,10 +139,13 @@ public class DetailActivity extends AppCompatActivity {
                     descriptionTextView.setVisibility(View.VISIBLE);
                 }
             }
-        });
+        };
+        showHideDescription.setOnClickListener(showHideDescriptionListen);
+        arrow.setOnClickListener(showHideDescriptionListen);
+
     }
 
-    private void setupUIFromAnimeData(){
+    private void setupUIFromAnimeData() {
         Bundle mBundle = getIntent().getExtras();
         if (mBundle != null) {
             mAnime = (AnimeCardData) mBundle.getSerializable("anime");
@@ -168,5 +158,31 @@ public class DetailActivity extends AppCompatActivity {
                 Log.e(TAG, "Anime: null");
             }
         }
+    }
+
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null) return;
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(),
+                View.MeasureSpec.UNSPECIFIED);
+        int totalHeight = 0;
+        View view = null;
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            view = listAdapter.getView(i, view, listView);
+            if (i == 0) view.setLayoutParams(new
+                    ViewGroup.LayoutParams(desiredWidth,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+
+            view.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += view.getMeasuredHeight();
+        }
+
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+
+        params.height = totalHeight + (listView.getDividerHeight() *
+                (listAdapter.getCount() - 1));
+
+        listView.setLayoutParams(params);
+        listView.requestLayout();
     }
 }

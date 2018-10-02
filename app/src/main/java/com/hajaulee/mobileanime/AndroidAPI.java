@@ -39,11 +39,9 @@ public class AndroidAPI {
         Log.d(TAG, "Loaded:Vsub" + loadedSection);
         for (String animeInfo : s) {
             String[] info = animeInfo.split(Tool.SEPARATOR);
-            Bitmap image = Tool.bitmapFromUrl(info[1], TAG);
-            if(image != null)
-            AnimeCardData.LOADED_BITMAP.put(info[1],image);
-            else
-                Log.e(TAG,  "NullImageError:" + Arrays.toString(info));
+            Bitmap image = Tool.bitmapFromUrl(mainActivity, info[1], TAG);
+            if (image == null)
+                Log.e(TAG, "NullImageError:" + Arrays.toString(info));
             Log.d(TAG, "Anime name: " + info[2]);
             list.add(new AnimeCardData(animeInfo, 3));
         }
@@ -105,9 +103,9 @@ public class AndroidAPI {
     }
 
     private void handleAfterLoadContent(SUBTITLE subtitle) {
-        Log.d(TAG, "Image pool size: " + AnimeCardData.LOADED_BITMAP.size());
         mainActivity.isLoadingMore = false;
         mainActivity.setLoadedPage(subtitle);
+        Tool.firstSave(mainActivity, subtitle);
         mainActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -142,7 +140,6 @@ public class AndroidAPI {
         handleAnimeList(mainActivity.getTotalVsubAnimeList(), s, loadedSection);
         refreshVsubUI(loadedSection);
         handleAfterLoadContent(SUBTITLE.VSUB);
-        Tool.saveLoadedAnime(mainActivity);
     }
 
     @JavascriptInterface
@@ -150,7 +147,6 @@ public class AndroidAPI {
         handleAnimeList(mainActivity.getTotalJsubAnimeList(), s, loadedSection);
         refreshJsubUI(loadedSection);
         handleAfterLoadContent(SUBTITLE.JSUB);
-        Tool.saveLoadedAnime(mainActivity);
     }
 
     @JavascriptInterface
@@ -162,7 +158,7 @@ public class AndroidAPI {
             Log.i(TAG, Arrays.toString(info));
             if (info.length != 3)
                 continue;
-            AnimeCardData.LOADED_BITMAP.put(info[1], Tool.bitmapFromUrl(info[1], TAG));
+            Tool.bitmapFromUrl(detailActivity, info[1], TAG);
             animeData.getEpisodeList().get(0).add(AnimeCardData.createEpisodeInfo(info[0], info[1], info[2]));
         }
         Log.i(TAG, "Episode size: " + s.length);
@@ -195,12 +191,11 @@ public class AndroidAPI {
         Log.d(TAG, "AnimeVsubSize:" + list.size());
         for (String animeInfo : s) {
             String[] info = animeInfo.split(Tool.SEPARATOR);
-            AnimeCardData.LOADED_BITMAP.put(info[1], Tool.bitmapFromUrl(info[1], TAG));
+            Tool.bitmapFromUrl(mainActivity, info[1], TAG);
             Log.d(TAG, "Anime name: " + info[2]);
             list.add(new AnimeCardData(animeInfo, 3));
         }
         refreshVsubUI(2);
         handleAfterLoadContent(SUBTITLE.VSUB);
-        Tool.saveLoadedAnime(mainActivity);
     }
 }

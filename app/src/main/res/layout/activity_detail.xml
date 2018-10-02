@@ -3,46 +3,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".DetailActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/detail_toolbar"
+    <LinearLayout
+        android:id="@+id/detail_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-
+        <WebView
+            android:id="@+id/web"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="0dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <WebView
-                android:id="@+id/web"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="0dp" />
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:paddingTop="0dp"
+            android:weightSum="3">
 
-            <ImageView
-                android:id="@+id/ivImage"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/app_name"
-                android:src="@mipmap/icon_round" />
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pre_ep"
+                android:textColor="@color/white" />
 
-            <TextView
-                android:id="@+id/tvDescription"
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cur_ep"
+                android:textColor="@color/white" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/next_ep"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:text="@string/app_name"
-                android:textSize="18sp" />
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp">
+
+                    <Button
+                        android:id="@+id/anime_name"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="0dp"
+                        android:layout_toStartOf="@id/arrow"
+                        android:padding="10dp"
+                        android:paddingBottom="20dp"
+                        android:text="@string/anime_name"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorDark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:text="@string/down_arrow"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="20dp"
+                    android:padding="5dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorDark"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray" />
+
+                <ListView
+                    android:id="@+id/episode_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="NestedScrolling" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

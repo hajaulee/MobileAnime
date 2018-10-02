@@ -10,7 +10,7 @@
         app:actionViewClass="android.support.v7.widget.SearchView"
         android:icon="@android:drawable/ic_menu_search"
         android:iconifiedByDefault="true"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_settings"

@@ -2,9 +2,11 @@ package com.hajaulee.mobileanime;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,9 +38,11 @@ public class AnimeCardAdapter extends RecyclerView.Adapter {
         AnimeCardViewHolder aHolder = (AnimeCardViewHolder) holder;
         position = aHolder.getAdapterPosition();
         AnimeCardData cardData = mAnimeCardList.get(position);
-        if(cardData.isImageLoaded())
-            aHolder.mImage.setImageBitmap(cardData.getBitmapImage());
-        else
+        Bitmap image = cardData.getBitmapImage(mContext);
+        if (image != null) {
+            aHolder.mImage.setImageBitmap(image);
+            Log.d("Set success", cardData.getAnimeCardLink());
+        } else
             aHolder.mImage.setImageResource(cardData.getAnimeCardImage());
         aHolder.mTitle.setText(cardData.getAnimeCardName());
         final int finalPosition = position;

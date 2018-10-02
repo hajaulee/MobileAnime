@@ -35,7 +35,7 @@ public class MyWebViewClient extends WebViewClient {
     // Khi trang tải xong
     @Override
     public void onPageFinished(WebView view, String url) {
-        Log.i("MyLog", "Your current url when webpage loading.. finish" + (subtitle == SUBTITLE.JSUB?" -JSUB- ":" -VSUB- ") +  url);
+        Log.i("MyLog", "Your current url when webpage loading.. finish" + (subtitle == SUBTITLE.JSUB ? " -JSUB- " : " -VSUB- ") + url);
         super.onPageFinished(view, url);
         if (subtitle == SUBTITLE.JSUB) {
             String script = "javascript: (function(){" +
@@ -50,10 +50,10 @@ public class MyWebViewClient extends WebViewClient {
                     "       processData();" +
                     "   }" +
                     "}" +
-                    Tool.processJsubDataScript +
+                    Javascript.processJsubDataScript +
                     "})()";
             webView.loadUrl(script);
-        }else if(subtitle == SUBTITLE.VSUB && url.contains("all/all/all")){
+        } else if (subtitle == SUBTITLE.VSUB && url.contains("all/all/all")) {
             String script = "javascript: (function(){" +
                     "var inter1 = setInterval(waitMovie1, 100);" +
                     "var anime1 = [];" +
@@ -67,10 +67,10 @@ public class MyWebViewClient extends WebViewClient {
                     "           Android.sendMoreVsubArray(anime1);" +
                     "       }" +
                     "   }" +
-                    Tool.processVsubDataScript +
+                    Javascript.processVsubDataScript +
                     "})()";
             webView.loadUrl(script);
-        }else if(subtitle == SUBTITLE.VSUB){
+        } else if (subtitle == SUBTITLE.VSUB) {
             String script = "javascript: (function(){" +
                     "var inter1 = setInterval(waitMovie1, 100);" +
                     "var inter2 = setInterval(waitMovie2, 100);" +
@@ -106,7 +106,7 @@ public class MyWebViewClient extends WebViewClient {
                     "           Android.sendVsubArray(anime1.concat(anime2).concat(anime3),0);" +
                     "       }" +
                     "   }" +
-                    Tool.processVsubDataScript +
+                    Javascript.processVsubDataScript +
                     "})()";
             webView.loadUrl(script);
         }

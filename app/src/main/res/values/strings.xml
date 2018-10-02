@@ -16,4 +16,14 @@
     <string name="load_more">Đang tải thêm dữ liệu</string>
     <string name="app_describe">Mobile Anime\n<small><small>Powered by HaJaU</small></small></string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="pre_ep">Tập trước</string>
+    <string name="next_ep">Tập sau</string>
+    <string name="cur_ep">Tập đang xem</string>
+    <string name="anime_name">Anime name</string>
+    <string name="down_arrow">▼</string>
+    <string name="up_arrow">▲</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

@@ -25,7 +25,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.ConcurrentHashMap;
 
 import static com.hajaulee.mobileanime.SUBTITLE.JSUB;
 import static com.hajaulee.mobileanime.SUBTITLE.VSUB;
@@ -77,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         dialogSet = new DialogSet(this);
         dialogSet.showHelloDialog();
         Toolbar toolbar = findViewById(R.id.toolbar);
-        AnimeCardData.LOADED_BITMAP = new ConcurrentHashMap<>();
         setSupportActionBar(toolbar);
         initViewPaperAndButton();
         loadAnimeLonHome();
@@ -85,13 +83,12 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Tool.getLoadedBitmap(getApplicationContext());
                 Tool.getLoadedAnime(MainActivity.this);
             }
         }).start();
     }
 
-    private void initViewPaperAndButton(){
+    private void initViewPaperAndButton() {
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         jsubSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), JSUB);
@@ -150,19 +147,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (currentSection != 1) {
                     searchView.setIconified(false);
-                } else if(!isLoadingMore){
+                } else if (!isLoadingMore) {
                     Snackbar.make(view, R.string.load_more, Snackbar.LENGTH_SHORT).show();
                     fab.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(getBaseContext(), R.color.colorDark)));
-                    if (currentLanguageSubtitle == 0 ) {
+                    if (currentLanguageSubtitle == 0) {
                         String script = "javascript: (function(){" +
                                 "window.scrollTo(0,document.body.scrollHeight);" +
                                 "setTimeout(processData, 1500);" +
-                                Tool.processJsubDataScript +
+                                Javascript.processJsubDataScript +
                                 "})()";
                         jsubWebView.loadUrl(script);
                         isLoadingMore = true;
                     } else if (currentLanguageSubtitle == 1 && vSubLoaded) {
-                        vsubWebView.loadUrl(String.format(Locale.US,ANIMEVSUB_LINK, animeAllPageCurrentPage));
+                        vsubWebView.loadUrl(String.format(Locale.US, ANIMEVSUB_LINK, animeAllPageCurrentPage));
                         isLoadingMore = true;
                         vSubLoaded = false;
                         animeAllPageCurrentPage++;
@@ -171,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void changeButtonBackGround(int button) {
         if (button == 0) {
             jSub.setBackground(getDrawable(R.drawable.left_button_ac));
@@ -193,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
     void loadAnimeLonHome() {
         jsubWebView = new WebView(this);
         jsubWebView.setWebViewClient(new MyWebViewClient(jsubWebView, JSUB));
-        jsubWebView.getSettings().setBlockNetworkImage(true);
+//        jsubWebView.getSettings().setBlockNetworkImage(true);
         jsubWebView.getSettings().setLoadsImagesAutomatically(false);
         jsubWebView.getSettings().setJavaScriptEnabled(true);
         jsubWebView.addJavascriptInterface(new AndroidAPI(this), "Android");
@@ -204,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
     void loadAnimeVSubHome() {
         vsubWebView = new WebView(this);
         vsubWebView.setWebViewClient(new MyWebViewClient(vsubWebView, VSUB));
-        vsubWebView.getSettings().setBlockNetworkImage(true);
+//        vsubWebView.getSettings().setBlockNetworkImage(true);
         vsubWebView.getSettings().setLoadsImagesAutomatically(false);
         vsubWebView.getSettings().setJavaScriptEnabled(true);
         vsubWebView.addJavascriptInterface(new AndroidAPI(this), "Android");
@@ -249,10 +247,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy(){
+    public void onDestroy() {
         super.onDestroy();
-        Tool.saveLoadedBitmap(getApplicationContext());
+        dialogSet.hideHelloDialog();
+        Tool.saveLoadedAnime(this);
+        Toast.makeText(this, "Đã thoát", Toast.LENGTH_SHORT).show();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

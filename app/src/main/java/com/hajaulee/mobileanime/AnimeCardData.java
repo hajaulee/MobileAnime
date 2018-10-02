@@ -1,15 +1,15 @@
 package com.hajaulee.mobileanime;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class AnimeCardData implements Serializable {
-    public static Map<String, Bitmap> LOADED_BITMAP;
     private static final String TAG = "AnimeCardData";
+    static final long serialVersionUID = 7597667082460298093L;
     private String animeCardName;
     private String animeCardImageUrl;
     private String animeCardDescription;
@@ -50,12 +50,13 @@ public class AnimeCardData implements Serializable {
         return animeCardName;
     }
 
-    public Bitmap getBitmapImage() {
-        return LOADED_BITMAP.get(this.animeCardImageUrl);
+
+    public Bitmap getBitmapImage(Context context) {
+        return Tool.getImageFromMapOrInternal(context, animeCardImageUrl);
     }
 
-    public boolean isImageLoaded() {
-        return LOADED_BITMAP.containsKey(this.animeCardImageUrl);
+    public boolean isImageLoaded(Context context) {
+        return getBitmapImage(context) == null;
     }
 
     public String getAnimeCardDescription() {
