@@ -61,6 +61,9 @@ public class DetailActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 if (url.contains("animelon.com/series"))
                     webView.loadUrl(Javascript.jSubLoadDescriptionAndEpisodeScript);
+                else if (url.contains("animelon.com/video")) {
+                    webView.loadUrl(Javascript.jsubAutoPlayScript);
+                }
             }
         });
         webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);

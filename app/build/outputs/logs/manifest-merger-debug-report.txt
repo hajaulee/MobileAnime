@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\120d31e60bda931f7f918bfa4fa37f04\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\62b0b6392046e4252157476714637dbb\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:2:1-11:12
@@ -22,69 +22,85 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\HaJaU\.gradle\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\de7b57c784e9c77eb5c1c469a9091297\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0778c07a763f164d5e76f947ec70fb58\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\5cd110fa2997d820cca7c7ee7caaf2f7\AndroidManifest.xml:17:1-22:12
-INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
 	package
 		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
 		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
 		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:1-43:12
 		INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:5:5-66
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
 		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:6:5-26:19
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:7:5-41:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\43135bc80eb76ba6cd347512c8354d95\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:cardview-v7:21.0.3] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\cardview-v7-21.0.3.aar\3be3b681c005dabc44f57890e373f0f1\AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:cardview-v7:21.0.3] C:\Users\HaJaU\.gradle\caches\transforms-1\files-1.1\cardview-v7-21.0.3.aar\3be3b681c005dabc44f57890e373f0f1\AndroidManifest.xml:16:5-19
 	android:supportsRtl
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:11:9-41
+	android:hardwareAccelerated
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:9:9-43
 	android:roundIcon
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:10:9-47
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:13:9-47
+	android:largeHeap
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:12:9-33
 	android:icon
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:8:9-42
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:10:9-42
 	android:allowBackup
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:12:9-40
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:15:9-40
 activity#com.hajaulee.mobileanime.MainActivity
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:13:9-22:20
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:16:9-25:20
 	android:label
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:15:13-45
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:18:13-45
 	android:theme
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:16:13-56
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:19:13-56
 	android:name
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:14:13-41
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:17:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:23:27-74
 activity#com.hajaulee.mobileanime.DetailActivity
-ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:23:9-25:61
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:26:9-29:51
 	android:label
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:25:13-58
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:28:13-58
+	android:hardwareAccelerated
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:29:13-48
 	android:name
-		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:24:13-43
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:27:13-43
+activity#com.hajaulee.mobileanime.FullscreenActivity
+ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:30:9-40:20
+	android:label
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:33:13-62
+	android:configChanges
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:32:13-74
+	android:theme
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:34:13-51
+	android:name
+		ADDED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml:31:13-47
 uses-sdk
 INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\Android\Project\MobileAnime\app\src\main\AndroidManifest.xml

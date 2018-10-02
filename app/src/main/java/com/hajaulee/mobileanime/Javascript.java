@@ -58,4 +58,17 @@ public class Javascript {
             "   }" +
             "   return animeList;" +
             "}";
+    public static final String jsubAutoPlayScript = "javascript: (function(){" +
+            "var inter = setInterval(waitVideo, 100);" +
+            "function waitVideo(){" +
+            "   Android.sendLog('Waiting waitVideo...');" +
+            "   var video = document.querySelector('video');" +
+            "   if(video.readyState === 4){" +
+            "       video.autoplay = true;" +
+            "       video.load();" +
+            "       video.play();" +
+            "       clearInterval(inter);" +
+            "   }" +
+            "}" +
+            "})()";;
 }

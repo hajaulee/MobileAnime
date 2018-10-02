@@ -1,4 +1,4 @@
-#Sun Sep 16 19:44:27 ICT 2018
-base.0=F\:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+#Tue Oct 02 08:04:56 ICT 2018
+base.0=F\:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\28
 path.0=classes.dex
 renamed.0=classes.dex

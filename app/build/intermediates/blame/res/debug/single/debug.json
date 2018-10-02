@@ -28,20 +28,20 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable\\abc_ic_search_api_material.xml"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\6cd5188c3e2f59aaca77f0f0775f0724\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_icon_round.xml.flat",
         "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\mipmap-anydpi-v26\\icon_round.xml"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\6cd5188c3e2f59aaca77f0f0775f0724\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -72,40 +72,40 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility_off.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\drawable-xxhdpi-v4\\design_ic_visibility_off.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_activity_chooser_view.xml.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility_off.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\drawable-xxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_main.xml.flat",
         "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -132,24 +132,24 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\db75a5a46b6bd3821a5716ba2b4f3235\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_icon_round.png.flat",
         "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_round.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -172,12 +172,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -196,12 +196,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_icon.png.flat",
         "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\mipmap-xxhdpi\\icon.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -228,12 +228,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail.xml.flat",
         "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
@@ -288,12 +288,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\6cd5188c3e2f59aaca77f0f0775f0724\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_design_bottom_navigation_item_background.xml.flat",
@@ -308,12 +308,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\6cd5188c3e2f59aaca77f0f0775f0724\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\color\\abc_tint_seek_thumb.xml"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\color\\abc_tint_seek_thumb.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -324,12 +324,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -344,24 +344,24 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_radio.xml.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_radio.xml.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -380,12 +380,12 @@
         "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_item_material.xml.flat",
@@ -512,12 +512,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\color\\switch_thumb_material_light.xml"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility.png.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\drawable-xxhdpi-v4\\design_ic_visibility.png"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility.png.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\drawable-xxhdpi-v4\\design_ic_visibility.png"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_design_ic_visibility_off.png.flat",
@@ -552,12 +552,12 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21_design_appbar_state_list_animator.xml.flat",
-        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\animator-v21\\design_appbar_state_list_animator.xml"
-    },
-    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\color_design_tint_password_toggle.xml.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21_design_appbar_state_list_animator.xml.flat",
+        "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\120d31e60bda931f7f918bfa4fa37f04\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout-v26_abc_screen_toolbar.xml.flat",
@@ -1636,6 +1636,10 @@
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_mylist.xml.flat",
+        "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\layout\\mylist.xml"
+    },
+    {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\62b0b6392046e4252157476714637dbb\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -1674,6 +1678,10 @@
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_tile_bg.xml.flat",
         "source": "C:\\Users\\HaJaU\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\6cd5188c3e2f59aaca77f0f0775f0724\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_fullscreen.xml.flat",
+        "source": "F:\\Android\\Project\\MobileAnime\\app\\src\\main\\res\\layout\\activity_fullscreen.xml"
     },
     {
         "merged": "F:\\Android\\Project\\MobileAnime\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
